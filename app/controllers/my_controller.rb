@@ -1,3 +1,3 @@
-class MyController < ActionController::Base
-  protect_from_forgery with: :exception
+class MyController < ApplicationController
+  before_action :authenticate_author!
 end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'blog/posts#index'
 
-  namespace 'author' do
+  namespace 'my' do
     resources :posts
   end
 

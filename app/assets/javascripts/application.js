@@ -15,3 +15,12 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+  tinymce.remove();
+  tinymce.init({
+    selector:'textarea#tiny',
+    plugins: "image code",
+    toolbar: "undo redo | styleselect | bold italic | image | code"
+  });
+})

@@ -1,6 +1,6 @@
 module My
   class PostsController < MyController
-    before_action :set_post, only: [:show, :edit, :update, :destroy]
+    before_action :set_post, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
 
     # GET /posts
     # GET /posts.json
@@ -20,6 +20,16 @@ module My
 
     # GET /posts/1/edit
     def edit
+    end
+
+    def publish
+      @post.publish
+      redirect_to my_posts_url
+    end
+
+    def unpublish
+      @post.unpublish
+      redirect_to my_posts_url
     end
 
     # POST /posts

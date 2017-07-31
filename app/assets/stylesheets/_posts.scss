@@ -46,9 +46,6 @@
 
 .posts.edit, .posts.new {
   .card {
-    .card-block {
-      background-color: $gray-light;
-    }
     .card-title {
       margin-bottom: 0;
       font-size: 18px;
@@ -59,13 +56,9 @@
       border-right: 0;
       input[type='text'], textarea {
         font-size: 14px;
-        background-color: $gray-light;
       }
       textarea {
         height: 100px;
-      }
-      &:last-child {
-        background-color: $gray-light;
       }
     }
   }

@@ -19,6 +19,7 @@
 document.addEventListener("turbolinks:load", function() {
   tinymce.remove();
   tinymce.init({
+    height: '400',
     selector:'textarea#tiny',
     plugins: "image code",
     toolbar: "undo redo | styleselect | bold italic | image | code"

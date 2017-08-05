@@ -12,3 +12,7 @@ default: &default
 development:
   <<: *default
   database: frog_blog_development
+
+production:
+  <<: *default
+  database: frog_blog_production

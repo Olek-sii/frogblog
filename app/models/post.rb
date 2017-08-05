@@ -32,7 +32,7 @@ class Post < ApplicationRecord
   scope :list_for, -> (page, tag) { recent_paginated(page).with_tag(tag) }
 
 	def should_generate_new_friendly_id?
-		title_changed?
+		title_changed? || slug.blank?
 	end
 
 	def publish
